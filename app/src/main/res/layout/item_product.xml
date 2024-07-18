@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/product_shape"
-        android:paddingStart="5dp"
+        android:paddingStart="6dp"
         android:layout_margin="4dp">
         <!-- Heart Icon -->
 
