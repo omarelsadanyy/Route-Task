@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="product"
+            type="com.example.routetask.model.Product" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/product_shape"
+        android:paddingStart="5dp"
+        android:layout_margin="4dp">
+        <!-- Heart Icon -->
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/shoe"
+            app:imageUrl="@{product.thumbnail}"
+            app:shapeAppearanceOverlay="@style/RoundedShape" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Nike Air Jordan"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:text="@{product.title}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Nike Air Jordan dfdfdfdfdfdfdfdfddfdfdfdf"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginTop="1dp"
+            android:text="@{product.description}" />
+
+        <!-- Price Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="EGP 1200"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"
+            android:text="@{`EGP ` + product.price}" />
+
+
+        <!-- Review Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="4.5"
+            android:text="@{`Review ` + (product.rating) + ``}"
+            android:drawableEnd="@drawable/star"
+            android:drawablePadding="3dp"
+            android:layout_marginTop="9dp"
+
+            />
+
+        <!-- Add to Cart Button -->
+        <ImageView
+            android:id="@+id/ivAddToCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/add"
+           />
+    </LinearLayout>
+</layout>
