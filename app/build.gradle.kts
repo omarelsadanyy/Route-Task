@@ -59,6 +59,9 @@ dependencies {
 
     // Dagger Hilt for dependency injection
     implementation("com.google.dagger:hilt-android:2.47")
+    implementation(libs.androidx.junit.ktx)
+    testImplementation("org.testng:testng:6.9.6")
+    androidTestImplementation("org.testng:testng:6.9.6")
     kapt("com.google.dagger:hilt-android-compiler:2.47")
 
     // Glide for image loading
